@@ -1,0 +1,13 @@
+{
+    "name": "glasteel/RBAC_Trait",
+    "authors": [
+        {
+            "name": "Paul Glass-Steel",
+            "email": "glasteel@email.unc.edu"
+        }
+    ],
+    "autoload": {
+        "classmap": ["HasRedBeanAsActiveRecordTrait.php"]
+    },
+	"require": {}
+}
