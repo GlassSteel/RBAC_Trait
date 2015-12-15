@@ -56,6 +56,13 @@ trait HasRedBeanAsActiveRecordTrait
 		return $bean;
 	}//getBean()
 
+	public function __call($method,$args){
+		$cols = $this->getPrimaryBeanCols();
+		if ( array_key_exists($method, $cols) && empty($args) ){
+			return $this->$method;
+		}
+	}//__call()
+
 	public function __get($key){
 		$cols = $this->getPrimaryBeanCols();
 		if ( array_key_exists($key, $cols) ){
